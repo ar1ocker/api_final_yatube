@@ -1,8 +1,8 @@
 # YATUBE API
 
-![picture alt](https://i.ytimg.com/vi/jLglJLQF9P8/maxresdefault.jpg)
+![picture alt](https://avatars.dzeninfra.ru/get-zen_doc/1107063/pub_5af739e4d7bf2190725110b0_5bf50a972a606000aaf365fd/scale_1200)
 
-===================
+------------------
 
 ## Описание
 
@@ -52,7 +52,7 @@ python3 manage.py runserver
 Authorization: Bearer <token>
 ```
 
-- **Получение токена**
+### **Получение токена**
 
 ```
 POST <host>/api/v1/jwt/create
@@ -64,7 +64,7 @@ Content-Type: application/json
 }
 ```
 
-- **Получение/создание постов**
+### **Получение/создание постов**
 
 Методы: GET, POST, OPTIONS
 
@@ -74,7 +74,7 @@ Content-Type: application/json
 <host>/api/v1/posts/
 ```
 
-- **Работа с отдельным постом**
+### **Работа с отдельным постом**
 
 Методы: GET, POST, PUT, PATCH, DELETE, OPTIONS
 
@@ -84,7 +84,7 @@ Content-Type: application/json
 <host>/api/v1/posts/<post_id>/
 ```
 
-- **Получение/создание комментариев**
+### **Получение/создание комментариев**
 
 Методы: GET, POST, OPTIONS
 
@@ -94,7 +94,7 @@ Content-Type: application/json
 <host>/api/v1/posts/<post_id>/comments/
 ```
 
-- **Работа с отдельным комментарием**
+### **Работа с отдельным комментарием**
 
 Методы: GET, POST, PUT, PATCH, DELETE, OPTIONS
 
@@ -104,17 +104,17 @@ Content-Type: application/json
 <host>/api/v1/posts/<post_id>/comments/<comment_id>/
 ```
 
-- **Получение списка групп**
+### **Получение списка групп**
 
 Методы: GET, POST, OPTIONS
 
 Авторизация для получения: **не требуется**
 
 ```
-GET <host>/api/v1/groups/
+<host>/api/v1/groups/
 ```
 
-- **Получение подписок**
+### **Получение подписок**
 
 Методы: GET, POST, OPTIONS
 
@@ -126,4 +126,4 @@ GET <host>/api/v1/groups/
 
 ------------------
 
-Более подробная информация об api доступна по адресу **<host>/redoc/**
+Более подробная информация об api доступна по адресу **\<host\>/redoc/**
