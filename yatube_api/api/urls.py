@@ -10,8 +10,6 @@ router.register('posts', PostViewSet, basename='post')
 router.register('groups', GroupViewSet, basename='group')
 router.register('follow', FollowViewSet, basename='follow')
 
-# В ТЗ ограничений не наблюдалось,
-# поэтому не мучаемся и используем drf-nested-routers
 comment_router = routers.NestedDefaultRouter(router, 'posts', lookup='post')
 comment_router.register('comments', CommentViewSet, basename='comment')
 

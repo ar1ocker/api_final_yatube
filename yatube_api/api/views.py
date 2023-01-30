@@ -6,7 +6,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.viewsets import (GenericViewSet, ModelViewSet,
                                      ReadOnlyModelViewSet, mixins)
 
-from posts.models import Comment, Group, Post
+from posts.models import Group, Post
 from .permissions import AuthorOrReadOnly
 from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
                           PostSerializer)
@@ -39,7 +39,7 @@ class CommentViewSet(ModelViewSet):
         return post
 
     def get_queryset(self):
-        return Comment.objects.filter(post=self.get_post())
+        return self.get_post().comments.all()
 
     def perform_create(self, serializer):
         serializer.save(author=self.request.user,
